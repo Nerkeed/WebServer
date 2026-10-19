@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Author: Illia Svyrydenko (nerkeed)
+# Author: Illia Svyrydenko (Nerkeed)
 # Date: October 8, 2026
 # Desc: makes users starting from "user01" up to "user10" inclusive
 #     : users also include a "README" file in their home directories
@@ -24,7 +24,7 @@ function createUsers() {
         sudo chown "$username:$username" "/home/$username/README.txt" # change the ownership to $username
 
         # change permissions to $username and README.txt of said $username
-        sudo chmod 755 "/home/$username"
+        sudo chmod 750 "/home/$username"
         sudo chmod 644 "/home/$username/README.txt"
 
         echo "Created $username"
